@@ -13,6 +13,7 @@
 #include <limits.h>
 #include <stdarg.h>
 #include <ctype.h>
+#include <math.h>
 
 // my simple dbg funcs.
 
