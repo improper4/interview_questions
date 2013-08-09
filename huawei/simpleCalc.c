@@ -32,7 +32,7 @@ int getTheOpIdx(char* str, int from, int to){
 int getValue(char* str, int from, int to){
 	int idx, leftVal, rightVal;
 	if(to - from == 2)
-		return doit(str[from] -48,str[from +1],str[to] - 48);
+		return doit(str[from] - 48,str[from +1],str[to] - 48);
 	
 	if(from == to)
 		return str[from] - 48;
