@@ -1,2 +1,4 @@
 401	palindromes
 10010	waldorf
+10361	AutomaticPoetry
+537	ai

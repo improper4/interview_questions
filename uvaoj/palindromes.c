@@ -53,7 +53,8 @@ int main(){
 	init();
 
 	char buf[100];
-	while(scanf("%s", buf) != EOF){
+	freopen("test.txt","r", stdin);
+	while(scanf("%s", &buf) != EOF){
 		
 		int len = strlen(buf);
 

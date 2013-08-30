@@ -35,8 +35,8 @@ int main(){
 	int blankLine = 0;
 
 	char what;
+	freopen("t.txt","r", stdin);
 	scanf("%d", &cases);
-
 
 	while(cases > 0){
 		if(blankLine > 0){
@@ -45,7 +45,6 @@ int main(){
 		blankLine = 1;
 		cases--;
 		char blank;
-		
 
 		scanf("%d%d", &gridRow, &gridCol);
 		scanf("%c", &what);
