@@ -12,7 +12,6 @@ char output[20][EMAX];
 int rank[20];
 
 void getWorstExcuses(int k, int e){
-
 	int i, j, max = 0;
 	for(i = 0; i < e; i++)	rank[i] = 0;
 	char *token;
@@ -46,14 +45,12 @@ int main(){
 	int K, E, i, ith = 1;
 
 	while(scanf("%d%d%*c", &K, &E) != EOF){
-
 		char ch;
 
 		for(i = 0; i < K; i++){
 			fgets(keywords[i], KMAX, stdin);
 			modify1(keywords[i], (int)strlen(keywords[i]));	
 		}
-		
 		for(i = 0; i < E; i++){			
 			fgets(excuses[i], EMAX, stdin);
 			modify(excuses[i], (int)strlen(excuses[i]), i);
