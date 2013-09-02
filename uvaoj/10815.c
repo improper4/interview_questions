@@ -61,7 +61,7 @@ int cmp(const void *a, const void *b){
 int main(){
 	int i, j;
 	char word[WMAX];
-	freopen("te.txt", "r", stdin);
+
 	while(fgets(buf, CHMAX, stdin) != NULL){
 		if(buf[strlen(buf) -1] == '\n') buf[strlen(buf) -1] = '\0';
 

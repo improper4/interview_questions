@@ -8,7 +8,7 @@ int ans[ANSMAX] = {0};
 int main(){
 	int canShow = 0;
 	int i;
-freopen("t.txt", "r", stdin);
+
 	while(fgets(buf, MAX, stdin) != NULL){
 
 		int j = 0, carry = 0, tmp = 0,len = strlen(buf);
