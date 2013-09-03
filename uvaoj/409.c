@@ -43,19 +43,17 @@ void modify(char *str, int len, int idx){
 }
 int main(){
 	int K, E, i, ith = 1;
-	freopen("t.txt", "r", stdin);
+
 	while(scanf("%d%d%*c", &K, &E) != EOF){
 		char ch;
 
 		for(i = 0; i < K; i++){
 			fgets(keywords[i], KMAX, stdin);
-			modify1(keywords[i], (int)strlen(keywords[i]));
-			printf("%d: %s\n", i, keywords[i]);	
+			modify1(keywords[i], (int)strlen(keywords[i]));	
 		}
 		for(i = 0; i < E; i++){			
 			fgets(excuses[i], EMAX, stdin);
 			modify(excuses[i], (int)strlen(excuses[i]), i);
-			printf("%d: %s\n", i, excuses[i]);
 		}
 		printf("Excuse Set #%d\n", ith++);
 		getWorstExcuses(K, E);
