@@ -2,7 +2,7 @@
 #include <string.h>
 #include <assert.h>
 #include <stdlib.h>
-#define MAX 767
+#define MAX 67
 typedef struct HashItem *pHi;
 
 struct HashItem{
@@ -14,12 +14,11 @@ int T, N, M;
 pHi hashTbl[MAX];
 
 unsigned int hash(char *str){
-	unsigned int val;
-	int i;
-	for(i = 0; i < strlen(str); i++){
-		val = val << 5 + str[i];
-	}
-	return val % MAX;
+	unsigned int hashVal = 0;
+	while(*str != '\0')
+		hashVal = (hashVal << 5) + *(str++);
+	
+	return hashVal % MAX;
 }
 int find(char* str, int val){
 	if(hashTbl[val] == NULL)
@@ -35,9 +34,11 @@ int find(char* str, int val){
 
 int insert(){
 	int ans = 0, i;
-	for(i = 1; i < strlen(buf); i++)if(buf[i] == '/'){
+	for(i = 1; i <= strlen(buf); i++)if(buf[i] == '/' || buf[i] == '\0'){
+		char c = buf[i];
 		buf[i] = '\0';
 		unsigned int val = hash(buf);
+		printf("%s -->%d\n", buf, val);
 		if(!find(buf, val)){
 			pHi new = malloc(sizeof(struct HashItem));
 			assert(new != NULL);
@@ -48,28 +49,27 @@ int insert(){
 			hashTbl[val] = new;
 			ans++;
 		}
-		buf[i] = '/';
-		fflush(stdout); // why!!!!!!
+		if(c == '/')
+			buf[i] = '/';
+
 	}
 	return ans;
 }
 int main(){
-	int i,j, now, lenBuf;
+	int i,j, now, lenBuf,res;
 	freopen("t.in", "r", stdin);
 	freopen("ans.out", "w", stdout);
 	scanf("%d", &T);
 
 	for(i = 0;i < T; i++){
-		int res = 0;
+		res = 0;
 		for(j = 0; j < MAX; j++){
 			hashTbl[j] = NULL;
 		}
-		scanf("%d %d%*c", &N, &M);
+		scanf("%d %d", &N, &M);
+
 		for(j = 0; j < N; j++){
 			scanf("%s", buf);
-			lenBuf = strlen(buf);
-			buf[lenBuf] = '/';
-			buf[lenBuf +1] = '\0';
 			res += insert();
 		}
 		printf("Case #%d: ", i+1);
@@ -77,9 +77,6 @@ int main(){
 
 		for(j = 0; j < M; j++){
 			scanf("%s", buf);
-			int lenBuf = strlen(buf);
-			buf[lenBuf] = '/';
-			buf[lenBuf +1] = '\0';
 			res += insert();
 		}
 		printf("%d\n", res - now);
