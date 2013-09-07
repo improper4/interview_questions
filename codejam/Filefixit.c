@@ -38,7 +38,7 @@ int insert(){
 		char c = buf[i];
 		buf[i] = '\0';
 		unsigned int val = hash(buf);
-		printf("%s -->%d\n", buf, val);
+
 		if(!find(buf, val)){
 			pHi new = malloc(sizeof(struct HashItem));
 			assert(new != NULL);
