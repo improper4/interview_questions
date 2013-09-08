@@ -1,0 +1,10 @@
+AlienNumber:		Practice Problems 					A
+AlienLanguage:		Qualification Round 2009 			A
+Filefixit:			Round 1B 2010						A
+MinScalarProduct:	Round 1A 2008						A
+reverseWords:		Qualification Round Africa 2010		B
+RopeIntranet:		Round 1C 2010						A
+rotate:				Round 1A 2010						A
+storeCredit:		Qualification Round Africa 2010		A
+T9Spell:			Qualification Round Africa 2010 	C
+Triangle_Trilemma:	Code Jam Beta 2008					A
