@@ -8,3 +8,9 @@ rotate:				Round 1A 2010						A
 storeCredit:		Qualification Round Africa 2010		A
 T9Spell:			Qualification Round Africa 2010 	C
 Triangle_Trilemma:	Code Jam Beta 2008					A
+Osmos:				Round 1B 2013						A
+Consonants:			Round 1C 2013						A
+Bullseye:			Round 1A 2013						A
+SaveUniverse:		Qualification Round 2008			A
+OldMagician:		Practice Contest					A
+Tomek:				Qualification Round 2013			A
